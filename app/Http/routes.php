@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::resource('api/todos', 'TodoController');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
