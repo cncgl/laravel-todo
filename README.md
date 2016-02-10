@@ -5,6 +5,8 @@ Todo Application for Laravel 5
 ```
 $ php artisan serve
 ```
+visit
+http://localhost:8000
 
 ## API
 index
