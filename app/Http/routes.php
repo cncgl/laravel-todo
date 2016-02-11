@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::resource('api/todos', 'TodoController');
+Route::resource('api/todos', 'TodoController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 
 /*
 |--------------------------------------------------------------------------

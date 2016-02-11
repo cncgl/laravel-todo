@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
-// use DB;
 use App\Todo;
 use App\Http\Requests;
 
@@ -19,25 +17,9 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
-        // $todos = ['id' =>1, 'status' =>0, 'title' => 'shopping'];
-        // return response()->json($todos);
         $todos = Todo::all();
         return response()->json($todos);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    /*
-    public function create()
-    {
-        //
-        DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
-    }
-    */
 
     /**
      * Store a newly created resource in storage.
@@ -47,7 +29,6 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $todo = new Todo;
         $todo->status = $request->input('status');
         $todo->title  = $request->input('title');
@@ -63,25 +44,9 @@ class TodoController extends Controller
      */
     public function show($id)
     {
-        //
-        // $result = DB::select('select * from todos where id = :id', ['id' => $id]);
-        // return response()->json($result);
         $todo = Todo::find($id);
         return response()->json($todo);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    /*
-    public function edit($id)
-    {
-        //
-    }
-    */
 
     /**
      * Update the specified resource in storage.
@@ -92,7 +57,6 @@ class TodoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $todo = Todo::find($id);
         $todo->status = $request->input('status');
         $todo->title  = $request->input('title');
