@@ -24,6 +24,25 @@ index
 ```
 $ curl http://localhost:8000/api/todos
 ```
+show
+```
+$ curl http://localhost:8000/api/todos/:id
+```
+store
+```
+$ curl http://localhost:8000/api/todos -H "Content-type: application/json" \
+ -X POST -d '{"status":0, "title":"Shopping"}'
+```
+update
+```
+$ curl http://localhost:8000/api/todos/:id -H "Content-type: application/json" \
+ -X PUT -d '{"status":1, "title":"Meeting"}'
+```
+destroy
+```
+$ curl http://localhost:8000/api/todos/:id -X DELETE
+```
+return 204 STATUS and empty body
 
 ## Test
 ```
