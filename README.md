@@ -1,6 +1,10 @@
 # laravel-todo
 
 [![Build Status](https://travis-ci.org/cncgl/laravel-todo.svg?branch=master)](https://travis-ci.org/cncgl/laravel-todo)
+[![Dependency Status](https://gemnasium.com/cncgl/laravel-todo.svg)](https://gemnasium.com/cncgl/laravel-todo)
+[![Code Climate](https://codeclimate.com/github/cncgl/laravel-todo/badges/gpa.svg)](https://codeclimate.com/github/cncgl/laravel-todo)
+[![Test Coverage](https://codeclimate.com/github/cncgl/laravel-todo/badges/coverage.svg)](https://codeclimate.com/github/cncgl/laravel-todo/coverage)
+[![Issue Count](https://codeclimate.com/github/cncgl/laravel-todo/badges/issue_count.svg)](https://codeclimate.com/github/cncgl/laravel-todo)
 
 Todo Application for Laravel 5
 
