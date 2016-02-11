@@ -3,4 +3,5 @@ php:
   - '5.6.17'
 install:
   - php composer.phar install
-
+script:
+  - CODECLIMATE_REPO_TOKEN=61371023a4bfd5de7a9c412c9fc2394d6fb2b08d4675b423e43e39b3279772ac ./vendor/bin/test-reporter
