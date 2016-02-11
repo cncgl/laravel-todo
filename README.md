@@ -1,4 +1,7 @@
 # laravel-todo
+
+[![Build Status](https://travis-ci.org/cncgl/laravel-todo.svg?branch=master)](https://travis-ci.org/cncgl/laravel-todo)
+
 Todo Application for Laravel 5
 
 ## Install
