@@ -12,10 +12,17 @@
 */
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
-    ];
+  return [
+    'name' => $faker->name,
+    'email' => $faker->email,
+    'password' => bcrypt(str_random(10)),
+    'remember_token' => str_random(10),
+  ];
+});
+
+$factory->define(App\Todo::class, function (Faker\Generator $faker) {
+  return [
+    'status' => mt_rand(0, 1),
+    'title'  => $faker->realText($maxNbChars = 200, $indexSize = 2)
+  ];
 });
