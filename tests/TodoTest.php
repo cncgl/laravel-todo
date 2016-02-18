@@ -7,14 +7,15 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class TotoTest extends TestCase
 {
   use DatabaseMigrations;
+  private $id = 0;
 
   public function setup()
   {
     parent::setup();
 
     $todo = factory(\App\Todo::class)->create();
-    echo $todo;
-
+    // echo $todo;
+    $this->id = $todo['id'];
   }
 
   /**
@@ -35,6 +36,11 @@ class TotoTest extends TestCase
 
   public function testShow()
   {
-    
+    // echo $this->id;
+
+    $this->get('/api/todos/' . $this->id)
+      ->seeJsonStructure(
+        ['id', 'status', 'title', 'created_at', 'updated_at']
+      );
   }
 }
