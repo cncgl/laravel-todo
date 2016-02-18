@@ -31,6 +31,10 @@ class TotoTest extends TestCase
           'id', 'status', 'title', 'created_at', 'updated_at'
         ]
       ]);
+  }
 
+  public function testShow()
+  {
+    
   }
 }
