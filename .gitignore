@@ -6,3 +6,4 @@ Homestead.json
 
 /.idea
 /build
+php_errors.log
