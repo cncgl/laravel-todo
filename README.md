@@ -11,11 +11,13 @@ Todo Application for Laravel 5
 ## Install
 ```
 $ php composer.phar install
+$ cp .env.example .env
+$ php artisan key:generate
 ```
 
 ## Prepare Database
 Create DB `laravel_sample` on MySQL
-Create User root/root ( or change ``app/config/database.php`` )
+Create User root/root ( or change ``.env`` )
 ```
 $ php artisan migrate
 ```
