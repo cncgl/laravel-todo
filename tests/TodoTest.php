@@ -1,5 +1,8 @@
 <?php
 
+namespace Tests\Unit;
+
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -26,8 +29,8 @@ class TotoTest extends TestCase
   public function testIndex()
   {
     // $this->assertTrue(true);
-    $this->get('/api/todos')
-      ->seeJsonStructure([
+    $response = $this->json('get','/api/todos');
+    $this->seeJsonStructure($response, [
         '*' => [
           'id', 'status', 'title', 'created_at', 'updated_at'
         ]
@@ -38,8 +41,8 @@ class TotoTest extends TestCase
   {
     // echo $this->id;
 
-    $this->get('/api/todos/' . $this->id)
-      ->seeJsonStructure(
+    $response = $this->json('get','/api/todos/' . $this->id);
+    $this->seeJsonStructure($response,
         ['id', 'status', 'title', 'created_at', 'updated_at']
       );
   }
